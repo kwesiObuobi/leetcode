@@ -19,6 +19,8 @@ jobs:
       - name: Move Submissions
         run: |
           mv /temp1/README.md real1/receive_here/
+          ls /temp1
+          ls real1
         working-directory: ${{ github.workspace }}
 
       - name: Commit and Push Changes
