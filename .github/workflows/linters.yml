@@ -3,7 +3,7 @@ name: Move LeetCode Submissions
 on:
   push:
     branches:
-      - main  # Change this to the default branch of your temporary repository
+      - main
 
 jobs:
   move-submissions:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout Target Repository
-        uses: actions/checkout@v2  # Use the actions/checkout action to clone the target repository
+        uses: actions/checkout@v2
         with:
-          repository: kwesiObuobi/real1  # Replace with the URL of your target repository
-          path: real1/receive_here  # The path where the target repository will be cloned
+          repository: kwesiObuobi/real1
+          path: real1/receive_here
 
       - name: Move Submissions
         run: |
@@ -28,4 +28,4 @@ jobs:
           git add .
           git commit -m "Move LeetCode submissions"
           git push
-        working-directory: real1  # Specify the target repository directory
+        working-directory: real1
