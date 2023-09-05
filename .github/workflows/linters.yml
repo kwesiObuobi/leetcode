@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug Output
+        run: |
+          ls -l /temp1/
+          ls -l real1/receive_here/
+        working-directory: ${{ github.workspace }}
+
       - name: Checkout Target Repository
         uses: actions/checkout@v2
         with:
@@ -29,9 +35,3 @@ jobs:
           git commit -m "Move LeetCode submissions"
           git push
         working-directory: real1
-
-      - name: Debug Output
-        run: |
-          ls -l /temp1/
-          ls -l real1/receive_here/
-        working-directory: ${{ github.workspace }}
