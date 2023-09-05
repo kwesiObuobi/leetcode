@@ -19,8 +19,6 @@ jobs:
       - name: Move Submissions
         run: |
           mv /temp1/README.md real1/receive_here/
-          ls /temp1
-          ls real1
         working-directory: ${{ github.workspace }}
 
       - name: Commit and Push Changes
@@ -31,3 +29,9 @@ jobs:
           git commit -m "Move LeetCode submissions"
           git push
         working-directory: real1
+
+      - name: Debug Output
+        run: |
+          ls -l /temp1/
+          ls -l real1/receive_here/
+        working-directory: ${{ github.workspace }}
