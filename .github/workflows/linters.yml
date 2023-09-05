@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Debug Output
         run: |
-          ls -l /temp1/
+          ls -l temp1/
           ls -l real1/receive_here/
         working-directory: ${{ github.workspace }}
 
