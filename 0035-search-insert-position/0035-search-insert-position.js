@@ -12,7 +12,8 @@ var searchInsert = function(nums, target) {
     let mid = 0;
     
     while (start <= end) {
-        mid = Math.floor((start + end) / 2);
+        // mid = Math.floor((start + end) / 2);
+        mid = Math.floor(start + (end-start) / 2);
         if (nums[mid] === target) {
             return mid;
         }
